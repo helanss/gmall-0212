@@ -1,9 +1,9 @@
 server:
-  port: 18082
+  port: 18083
 spring:
   cloud:
     nacos:
-      config:
+      discovery:
         server-addr: localhost:8848
     sentinel:
       transport:
@@ -19,7 +19,7 @@ spring:
       probability: 1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/guli_sms
+    url: jdbc:mysql://127.0.0.1:3306/guli_wms
     username: root
     password: 279279
   redis:
@@ -29,8 +29,8 @@ feign:
   sentinel:
     enabled: true
 mybatis-plus:
-  mapper-locations: classpath://mapper/sms/**/*.xml
-  type-aliases-package: com.atguigu.gmall.sms.entity
+  mapper-locations: classpath:mapper/wms/**/*.xml
+  type-aliases-package: com.atguigu.gmall.wms.entity
   global-config:
     db-config:
       id-type: auto

@@ -5,6 +5,7 @@ import lombok.Data;
 /**
  * 返回数据
  */
+
 @Data
 public class ResponseVo<T> {
 	private static final long serialVersionUID = 1L;
